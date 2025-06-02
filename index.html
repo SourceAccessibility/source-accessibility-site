@@ -10,18 +10,20 @@
 <body>
   <header>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <nav>
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="mentoring.html">Mentoring</a></li>
-        <li><a href="training.html">Training</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="consultation.html">Free Consultation</a></li>
-        <li><a href="course.html">Course</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- 🔼 Start Navigation -->
+   <div id="nav-placeholder"></div>
+<script>
+  fetch('nav.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+</script>
+<noscript>
+  <p class="no-js-warning">
+    JavaScript is disabled. Navigation may not display correctly. 
+    <a href="sitemap.html">View our site map</a>.
+  </p>
+</noscript>
+    <!-- 🔼 End Navigation -->
   </header>
 
   <main id="main">
@@ -42,7 +44,10 @@ We provide:
 
 All our work aligns with key compliance frameworks like the European Accessibility Act (EAA), EN 301 549, and WCAG.
 
-By adopting an inclusive mindset, we help you reflect the real ways people interact with your designs—and remove barriers before they block anyone’s path.    </p>
+By adopting an inclusive mindset, we help you reflect the real ways people interact with your designs—and remove barriers before they block anyone’s path.  
+
+Because inclusion is everyone’s responsibility — and when we design with disabled users in mind, we create better experiences for all. 
+ </p>
     <img src="assets/logo-placeholder.svg" alt="Source Accessibility logo placeholder" class="logo" />
   </main>
 
