@@ -1,17 +1,51 @@
-<section aria-labelledby="testimonial-skyscanner">
-  <h1 id="testimonial-skyscanner">What our partners say</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Client testimonials about Source Accessibility's work in inclusive design and user testing." />
+  <title>Testimonials | Source Accessibility</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch('nav.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+    </script>
+    <noscript>
+      <p class="no-js-warning">
+        JavaScript is disabled. Navigation may not display correctly.
+        <a href="sitemap.html">View our site map</a>.
+      </p>
+    </noscript>
+  </header>
 
-  <blockquote>
-    <p>“Marie is an invaluable accessibility consultant to Skyscanner, supporting us primarily with inclusive user testing. Her technical background and genuine passion for accessibility makes a real impact on how we design and build for disabled users.”</p>
+  <main id="main" class="testimonial-section">
+    <h1>What Our Clients Say</h1>
 
-    <p>“Marie has created a robust user testing framework for our Partner Programme, carried out extensive manual audits, built a trusted panel of disabled testers, and works directly with our engineering teams to plan and facilitate high-quality inclusive user testing sessions.”</p>
+    <section class="testimonial">
+      <img src="assets/logos/skyscanner-logo-optimized.png" alt="Skyscanner logo" class="client-logo" />
+      <blockquote>
+        <p>
+          “Marie is an invaluable accessibility consultant to Skyscanner, supporting us primarily with inclusive user testing. Her technical background and genuine passion for accessibility makes a real impact on how we design and build for disabled users.
+          
+          Marie has created a robust user testing framework for our Partner Programme, carried out extensive manual audits, built a trusted panel of disabled testers, and works directly with our engineering teams to plan and facilitate high-quality inclusive user testing sessions.
 
-    <p>“She’s hard working, flexible, and a pleasure to work with – a true asset to any team!”</p>
+          She’s hard working, flexible, and a pleasure to work with – a true asset to any team!”
+        </p>
+        <footer>
+          <strong>Heather Hepburn</strong>, Head of Accessibility, Skyscanner
+        </footer>
+      </blockquote>
+    </section>
+  </main>
 
-    <footer>
-      <strong>Heather Hepburn</strong><br>
-      Head of Accessibility<br>
-      <img src="assets/logos/skyscanner-logo-optimized.png" alt="Skyscanner logo" style="height: 50px; margin-top: 0.5rem;" />
-    </footer>
-  </blockquote>
-</section>
+  <footer>
+    <p>&copy; 2025 Source Accessibility. All rights reserved.</p>
+  </footer>
+</body>
+</html>
