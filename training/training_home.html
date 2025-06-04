@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility training and workshops by Source Accessibility" />
+  <title>Training | Source Accessibility</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch('nav.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+    </script>
+    <noscript>
+      <p class="no-js-warning">
+        JavaScript is disabled. Navigation may not display correctly.
+        <a href="sitemap.html">View our site map</a>.
+      </p>
+    </noscript>
+  </header>
+
+  <!-- Courses Page: Updated Structure -->
+<main id="main-content">
+  <h1>Training & Workshops</h1>
+  <p>Explore our current accessibility training options below. Each course includes a short summary and a link to find out more or register your interest.</p>
+
+  <section class="course-card" aria-labelledby="accessibility-fundamentals">
+    <h2 id="accessibility-fundamentals">Accessibility Fundamentals</h2>
+    <p>A comprehensive introduction to digital accessibility and disability awareness aimed at anyone new to accessibility or looking to align teams around inclusive design.</p>
+    <div class="card-actions">
+      <a href="/courses/accessibility-fundamentals.html" class="button">View details for Accessibility Fundamentals workshop</a>
+    </div>
+  </section>
+
+  <section class="course-card" aria-labelledby="manual-accessibility-testing">
+  <h2 id="manual-accessibility-testing">Manual Accessibility Testing</h2>
+  <p>Learn how to plan and run inclusive usability sessions with disabled participants and turn insights into real impact.</p>
+  <div class="card-actions">
+    <a href="/courses/inclusive-user-testing.html" class="button">View details for Auditing and Reporting for Accessibility workshop</a>
+  </div>
+</section>
+
+  <section class="course-card" aria-labelledby="inclusive-user-testing">
+  <h2 id="inclusive-user-testing">Inclusive User Testing</h2>
+  <p>Learn how to plan and run inclusive usability sessions with disabled participants and turn insights into real impact.</p>
+  <div class="card-actions">
+    <a href="/courses/inclusive-user-testing.html" class="button">View details for Inclusive User Testing workshop</a>
+  </div>
+</section>
+
+  <section class="course-card" aria-labelledby="auditing-and-reporting-for-accessibility">
+  <h2 id="auditing-and-reporting-for-accessibility">Auditing and Reporting for Accessibility</h2>
+  <p>Learn how to plan and run inclusive usability sessions with disabled participants and turn insights into real impact.</p>
+  <div class="card-actions">
+    <a href="/courses/inclusive-user-testing.html" class="button">View details for Auditing and Reporting for Accessibility workshop</a>
+  </div>
+</section>
+
+<section class="course-card" aria-labelledby="screen-reader-workshop">
+  <h2 id="screen-reader-workshop">Screen Reader Workshop (with Adi Latif)</h2>
+  <p>Learn how to plan and run inclusive usability sessions with disabled participants and turn insights into real impact.</p>
+  <div class="card-actions">
+    <a href="/courses/inclusive-user-testing.html" class="button">View details for Screen Reader workshop</a>
+  </div>
+</section>
+
+  <!-- Repeat course cards below using same structure -->
+</main>
+   
