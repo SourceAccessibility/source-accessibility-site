@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility Fundamentals training course from Source Accessibility" />
+  <title>Accessibility Fundamentals | Source Accessibility</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch('/nav.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+    </script>
+    <noscript>
+      <p class="no-js-warning">
+        JavaScript is disabled. Navigation may not display correctly.
+        <a href="/sitemap.html">View our site map</a>.
+      </p>
+    </noscript>
+  </header>
+
+  <main id="main-content">
+    <h1>Accessibility Fundamentals</h1>
+    <p><strong>Format:</strong> Half day or full day<br>
+    <strong>Who it’s for:</strong> Anyone new to accessibility or looking to align teams around inclusive design</p>
+
+    <h2>What it covers</h2>
+    <p>A comprehensive introduction to digital accessibility and disability awareness. Challenges how teams think about access and inclusion — going beyond compliance to focus on people. Combines key principles with real-life examples and hands-on activities.</p>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li>Builds confidence discussing disability and inclusive design</li>
+      <li>Encourages teams to think differently about their audiences</li>
+      <li>Establishes understanding across user, employee, and client touch points</li>
+      <li>Equips teams to spot and fix common accessibility issues at all stages of the product life cycle</li>
+    </ul>
+
+    <h2>Register your interest</h2>
+    <form action="/contact.html" method="get" aria-label="Course enquiry form">
+      <fieldset>
+        <legend>Your details</legend>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="organisation">Organisation (optional)</label>
+        <input type="text" id="organisation" name="organisation" />
+
+        <label for="message">Tell us what you're interested in or any specific requirements</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit enquiry</button>
+    </form>
+  </main>
+</body>
+</html>
