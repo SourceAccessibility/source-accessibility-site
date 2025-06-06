@@ -28,7 +28,8 @@ a:hover {
   overflow: hidden;
 }
 .skip-link:focus {
-  position: static;
+  position: absolute;
+  /* changed position from static to absolute in case it starts misbehaving */
   width: auto;
   height: auto;
   background: #f9c80e;
