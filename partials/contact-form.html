@@ -1,0 +1,61 @@
+<!-- contact-form.html -->
+<form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST" aria-label="Course enquiry form">
+  <fieldset>
+    <legend>Your details</legend>
+
+    <label for="name">Full name</label>
+    <input type="text" id="name" name="name" autocomplete="name" required />
+
+    <label for="email">Email address</label>
+    <input type="email" id="email" name="email" autocomplete="email" required />
+
+    <label for="organisation">Organisation (optional)</label>
+    <input type="text" id="organisation" name="organisation" autocomplete="organization" />
+
+    <label for="message">Message or specific requirements</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </fieldset>
+
+  <button type="submit">Submit enquiry</button>
+</form>
+
+<!-- Accessible thank-you modal -->
+<div id="thankYouModal" class="modal" role="dialog" aria-labelledby="thankYouTitle" aria-modal="true" hidden>
+  <div class="modal-content">
+    <h2 id="thankYouTitle">Thank you for your enquiry!</h2>
+    <p>We'll be in touch shortly.</p>
+    <button id="closeModal">Close and return</button>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const modal = document.getElementById('thankYouModal');
+  const closeBtn = document.getElementById('closeModal');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Use fetch to submit form data via something- this may be a  third-party service or a domain-specific endpoint
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        modal.hidden = false;
+        modal.querySelector('.modal-content').focus();
+        closeBtn.focus();
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.hidden = true;
+    form.querySelector('button[type="submit"]').focus();
+  });
+</script>
