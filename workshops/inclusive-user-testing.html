@@ -3,23 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Accessibility training and workshops by Source Accessibility" />
-  <title>Training | Source Accessibility</title>
-<link rel="stylesheet" href="/styles.css" />
+  <meta name="description" content="Manual Accessibility Testing workshop from Source Accessibility" />
+  <title>Manual Accessibility Testing | Source Accessibility</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
   <header>
     <a class="skip-link" href="#main">Skip to main content</a>
     <div id="nav-placeholder"></div>
     <script>
-         fetch('/partials/nav.html')
+      fetch('/partials/nav.html')
         .then(res => res.text())
         .then(html => document.getElementById('nav-placeholder').innerHTML = html);
     </script>
     <noscript>
       <p class="no-js-warning">
         JavaScript is disabled. Navigation may not display correctly.
-        <a href="sitemap.html">View our site map</a>.
+        <a href="/sitemap.html">View our site map</a>.
       </p>
     </noscript>
   </header>
+
+  <main id="main-content"  tabindex="-1">
+    <h1>Inclusive User Testing</h1>
+    <p><strong>Format:</strong> 1 day (or 2 half days)<br>
+    <strong>Who it’s for:</strong> Individuals, UX teams, product managers, researchers, accessibility consultants</p>
+
+    <h2>What it covers</h2>
+    <p>
+      How to plan and run inclusive testing with disabled participants. Covers planning, recruitment, facilitation, task design, and how to turn qualitative feedback into actionable insights.
+    </p>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li>Builds confidence to independently plan, facilitate, and report on inclusive user research</li>
+      <li>Helps teams design ethical, respectful sessions that meet participant needs</li>
+      <li>Strengthens skills in turning feedback into practical design and product decisions</li>
+      <li>Supports the development of scalable, inclusive research practices across teams</li>
+    </ul>
+
+    <h2>Register your interest</h2>
+    <div id="contact-form-placeholder"></div>
+    <script>
+      fetch('/partials/contact-form.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('contact-form-placeholder').innerHTML = html);
+    </script>
+    <noscript>
+      <p class="no-js-warning">
+        JavaScript is disabled. Contact form may not display correctly.
+        <a href="/contact.html">Go to contact page</a>.
+      </p>
+    </noscript>
+  </main>
+</body>
+</html>
